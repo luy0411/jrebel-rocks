@@ -33,8 +33,8 @@ This repository contains a simple Spring Boot application designed to explore th
 ### Clone the Repository
 
 ```
-git clone https://github.com/yourusername/spring-boot-simple-app.git
-cd spring-boot-simple-app
+git clone https://github.com/luy0411/jrebel-rocks.git
+cd jrebel-rocks
 ```
 
 ## Build the Application
@@ -42,20 +42,20 @@ cd spring-boot-simple-app
 Use Maven to build the application:
 
 ```
-./mvnw clean package
+mvn clean install
 ```
 
 ## Run Locally with Docker
 Build the Docker image:
 
 ```
-docker build -t spring-boot-simple-app .
+docker build -t jrebel-rocks .
 ```
 
 Run the Docker container:
 
 ```
-docker run -p 8080:8080 spring-boot-simple-app
+docker run -p 8080:8080 jrebel-rocks
 ```
 
 The application will be accessible at http://localhost:8080.
@@ -71,14 +71,14 @@ aws configure
 Create an ECR repository:
 
 ```
-aws ecr create-repository --repository-name spring-boot-simple-app
+aws ecr create-repository --repository-name jrebel-rocks
 ```
 
 ## Create Docker Image
 Authenticate Docker to your ECR:
 
 ```
-$(aws ecr get-login --no-include-email --region your-region)
+$(aws ecr get-login --no-include-email --region [your-region]
 ```
 
 Tag the Docker image:
