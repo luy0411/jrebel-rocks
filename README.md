@@ -84,20 +84,20 @@ $(aws ecr get-login --no-include-email --region [your-region]
 Tag the Docker image:
 
 ```
-docker tag spring-boot-simple-app:latest your-account-id.dkr.ecr.your-region.amazonaws.com/spring-boot-simple-app:latest
+docker tag jrebel-rocks:latest [your-account-id].dkr.ecr.[your-region].amazonaws.com/jrebel-rocks:latest
 ```
 
 Push Docker Image to ECR
 
 ```
-docker push your-account-id.dkr.ecr.your-region.amazonaws.com/spring-boot-simple-app:latest
+docker push [your-account]-id.dkr.ecr.[your-region].amazonaws.com/jrebel-rocks:latest
 ```
 
 ## Create ECS Cluster and Service
 Create an ECS cluster:
 
 ```
-aws ecs create-cluster --cluster-name spring-boot-cluster
+aws ecs create-cluster --cluster-name jrebel-rocks
 ```
 
 Register a task definition:
@@ -105,13 +105,13 @@ Register a task definition:
 Update the task-definition.json file with your ECR image details and then register it:
 
 ```
-aws ecs register-task-definition --cli-input-json file://task-definition.json
+aws ecs register-task-definition --cli-input-json file://jrebel-rocks.json
 ```
 
 Create a service:
 
 ```
-aws ecs create-service --cluster spring-boot-cluster --service-name spring-boot-service --task-definition spring-boot-task --desired-count 1 --launch-type FARGATE --network-configuration "awsvpcConfiguration={subnets=[your-subnet],securityGroups=[your-security-group],assignPublicIp=ENABLED}"
+aws ecs create-service --cluster jrebel-rocks --service-name jrebel-rocks-service --task-definition jrebel-rocks-task --desired-count 1 --launch-type FARGATE --network-configuration "awsvpcConfiguration={subnets=[your-subnet],securityGroups=[your-security-group],assignPublicIp=ENABLED}"
 ```
 
 ##Using jRebel
