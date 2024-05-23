@@ -1,4 +1,4 @@
-package com.luisin.jrebel_rocks;
+package com.luisin.jrebel;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
