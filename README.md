@@ -119,17 +119,23 @@ aws ecs create-service --cluster jrebel-rocks --service-name jrebel-rocks-servic
 - Install jRebel plugin in your IDE (IntelliJ IDEA, Eclipse, etc.).
 
 - Run the Spring Boot application using docker
--  
-- Configure jRebel in your IDE and point the remote server to your docker service
+  
+- Configure jRebel in your IDE and point the remote server to your docker service (probably localhost:8080)
 
 - Make changes to your code and see them reflect immediately without restarting the application.
 
 ## Remote Development with jRebel
+
  - Enable jRebel remote server support in your IDE.
+   
  - Configure the remote server URL (the ECS service URL).
+   
  - Deploy the application with the jRebel agent enabled on ECS.
+   
  - Make changes locally, save them and observe the changes take effect immediately.
 
 ## Conclusion
+
 This project demonstrates how to set up a simple Spring Boot application with jRebel for efficient local and remote development. 
+
 By using Docker and AWS ECS, you can easily deploy and manage your application in a scalable environment while taking advantage of jRebel's hot-reloading capabilities.
