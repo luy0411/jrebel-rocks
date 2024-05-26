@@ -102,16 +102,54 @@ aws ecs create-cluster --cluster-name jrebel-rocks
 
 Register a task definition:
 
-Update the task-definition.json file with your ECR image details and then register it:
+Create a file named jrebel-rocks-aws-ecs-td.json (the one below is just an example)
+```
+{
+    "containerDefinitions": [
+        {
+            "name": "jrebel-rocks",
+            "image": "117278927470.dkr.ecr.us-west-2.amazonaws.com/jrebel-rocks:latest",			
+			"portMappings": [
+				{
+				  "name": "8080",
+				  "containerPort": 8080,
+				  "hostPort": 8080,
+				  "protocol": "tcp",
+				  "appProtocol": "http"
+				}
+			],
+			"logConfiguration": { 
+				"logDriver": "awslogs",
+				"options": { 
+				   "awslogs-group" : "/ecs/jrebel-rocks",
+				   "awslogs-region": "us-west-2",
+				   "awslogs-stream-prefix": "ecs"
+				}
+			},
+            "essential": true
+        }
+    ],
+    "family": "jrebel-rocks",	
+	"requiresCompatibilities": [ 
+       "FARGATE" 
+    ],
+	"networkMode": "awsvpc",
+	"memory": "512",
+	"cpu": "256",
+	"executionRoleArn": "arn:aws:iam::117278927470:role/ecsTaskExecutionRole"
+}
+```
+
+Update the jrebel-rocks-aws-ecs-td.json file with your ECR image details and then register it:
 
 ```
-aws ecs register-task-definition --cli-input-json file://jrebel-rocks.json
+aws ecs register-task-definition --cli-input-json file://jrebel-rocks-aws-ecs-td.json
 ```
 
 Create a service:
 
 ```
-aws ecs create-service --cluster jrebel-rocks --service-name jrebel-rocks-service --task-definition jrebel-rocks-task --desired-count 1 --launch-type FARGATE --network-configuration "awsvpcConfiguration={subnets=[your-subnet],securityGroups=[your-security-group],assignPublicIp=ENABLED}"
+aws ecs create-service --cluster jrebel-rocks --service-name jrebel-rocks --task-definition jrebel-rocks:4 --desired-count 1 --launch-type FARGATE --platform-version LATEST     --network-configuration "awsvpcConfiguration={subnets=[subnet-97f49ef2],securityGroups=[sg-00d1a3c4873bb08d2],assignPublicIp=ENABLED}"
 ```
 
 ## Using jRebel with local server (Docker / Spring)
