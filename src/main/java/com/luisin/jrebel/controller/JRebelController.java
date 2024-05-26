@@ -9,6 +9,6 @@ public class JRebelController {
 
     @GetMapping("/jrebel")
     public ResponseEntity<String> jrebel() {
-        return ResponseEntity.ok().body("JRebel rocks!");
+        return ResponseEntity.ok().body("JRebel rocks, baby!");
     }
 }
