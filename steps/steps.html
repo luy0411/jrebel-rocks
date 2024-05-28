@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JRebel Videos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .custom-control-label::before {
+            border-radius: 0.25rem;
+        }
+        .accordion .card-header {
+            cursor: pointer;
+        }
+        .checked-title::after {
+            content: ' ✓';
+            color: green;
+        }
+        .centered-div {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .highlighted-text {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Hi there =) <a href="https://www.linkedin.com/in/lhsantos89/"><i>Luisin</i></a> here</h1>
+        <p class="text-center">No, I will not show u how good my English is. Enjoy the songs and let's jrebel together</p>
+        
+        <div class="accordion" id="accordionExample1">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Video 1: JRebeling with IntelliJ & Plugin
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample1">
+                    <div class="card-body">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item1-1">
+                            <label class="custom-control-label" for="item1-1">Git clone</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item1-2">
+                            <label class="custom-control-label" for="item1-2">Mvn clean install</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item1-3">
+                            <label class="custom-control-label" for="item1-3">IntelliJ</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item1-4">
+                            <label class="custom-control-label" for="item1-4">Run with JRebel plugin</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item1-5">
+                            <label class="custom-control-label" for="item1-5">Make code changes and see the magic</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion mt-3" id="accordionExample2">
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Video 2: JRebeling with Docker (locally)
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample2">
+                    <div class="card-body">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item2-1">
+                            <label class="custom-control-label" for="item2-1">Docker Desktop start</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item2-2">
+                            <label class="custom-control-label" for="item2-2">Dockerfile review</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item2-3">
+                            <label class="custom-control-label" for="item2-3">Docker build</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item2-4">
+                            <label class="custom-control-label" for="item2-4">Docker run</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item2-5">
+                            <label class="custom-control-label" for="item2-5">Make code changes and see the magic</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion mt-3" id="accordionExample3">
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Video 3: JRebeling with AWS ECS Cluster (remotely)
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample3">
+                    <div class="card-body">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item3-1">
+                            <label class="custom-control-label" for="item3-1">AWS console login</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item3-2">
+                            <label class="custom-control-label" for="item3-2">AWS ECR upload image</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item3-3">
+                            <label class="custom-control-label" for="item3-3">AWS ECS create cluster</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item3-4">
+                            <label class="custom-control-label" for="item3-4">AWS ECS create task definition</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item3-5">
+                            <label class="custom-control-label" for="item3-5">AWS ECS create service</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item3-6">
+                            <label class="custom-control-label" for="item3-6">AWS task starting logs and public IP</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item3-7">
+                            <label class="custom-control-label" for="item3-7">AWS validate security groups</label>
+                        </div>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="item3-8">
+                            <label class="custom-control-label" for="item3-8">Make code changes and see the magic</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="centered-div">
+            <img src="https://drive.google.com/thumbnail?id=1qBHM7S2y_p_hiC_S1c_ktlorvgWFeOqU" />
+            <p class="highlighted-text">Made with Maritaca.ai by a backend developer</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            function updateAccordionTitle(accordionId, titleSelector) {
+                var allChecked = true;
+                $(`#${accordionId} .custom-control-input`).each(function() {
+                    if (!this.checked) {
+                        allChecked = false;
+                    }
+                });
+                if (allChecked) {
+                    $(titleSelector).addClass('checked-title');
+                } else {
+                    $(titleSelector).removeClass('checked-title');
+                }
+            }
+
+            $('#accordionExample1 .custom-control-input').on('change', function() {
+                updateAccordionTitle('accordionExample1', '#headingOne .btn');
+            });
+
+            $('#accordionExample2 .custom-control-input').on('change', function() {
+                updateAccordionTitle('accordionExample2', '#headingTwo .btn');
+            });
+
+            $('#accordionExample3 .custom-control-input').on('change', function() {
+                updateAccordionTitle('accordionExample3', '#headingThree .btn');
+            });
+        });
+    </script>
+</body>
+</html>
